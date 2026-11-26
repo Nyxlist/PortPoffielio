@@ -1,0 +1,2012 @@
+{
+  "version": 5,
+  "name": "Poffie",
+  "footerNote": "Business inquiries: see the Contact page",
+  "theme": {
+    "colors": {
+      "primary": "#ff8fb1",
+      "secondary": "#ffc4d9",
+      "accent": "#b9a8c8",
+      "base-100": "#ffffff",
+      "base-200": "#fff0f5",
+      "base-300": "#ffd1e2",
+      "base-content": "#5b4a57"
+    },
+    "font": "Plus Jakarta Sans",
+    "headingFont": "Caprasimo",
+    "radius": "bubbly",
+    "header": "pills",
+    "scene": {
+      "sky": "custom",
+      "skyTop": "#fff3f8",
+      "skyBottom": "#ebb3c3",
+      "decor": [],
+      "particles": ["glints"],
+      "amount": "some",
+      "speed": "calm",
+      "side": "right",
+      "veil": "card"
+    },
+    "customFonts": [],
+    "pageBackground": null,
+    "effects": {
+      "scroll": {
+        "reveal": "blur"
+      },
+      "click": {
+        "type": "ripple"
+      }
+    }
+  },
+  "content": {
+    "queue": {
+      "showPayment": true,
+      "stages": [
+        {
+          "id": "waiting",
+          "name": "Waiting",
+          "color": "#e4e4e7"
+        },
+        {
+          "id": "sketch",
+          "name": "Sketch",
+          "color": "#fecaca"
+        },
+        {
+          "id": "lineart",
+          "name": "Line Art",
+          "color": "#f472b6"
+        },
+        {
+          "id": "coloring",
+          "name": "Coloring",
+          "color": "#e879f9"
+        },
+        {
+          "id": "done",
+          "name": "Done",
+          "color": "#86efac"
+        }
+      ],
+      "payments": [
+        {
+          "id": "unpaid",
+          "name": "Not Paid",
+          "color": "#d4d4d8"
+        },
+        {
+          "id": "half",
+          "name": "50% Paid",
+          "color": "#60a5fa"
+        },
+        {
+          "id": "paid",
+          "name": "Paid",
+          "color": "#84cc16"
+        }
+      ],
+      "lists": [
+        {
+          "id": "9f480c74-bd4c-460b-8c8a-c27dbcd2ffcb",
+          "title": "Queue L2D",
+          "kind": "queue",
+          "cards": [
+            {
+              "id": "3f1ed2a1-c54e-4a22-97ea-3a316a3cd1af",
+              "title": "DE - Start Oct",
+              "note": "",
+              "stage": "coloring",
+              "payment": "paid"
+            },
+            {
+              "id": "16ae343d-b9a8-49b9-b2e9-2c807746e43c",
+              "title": "CK - Start November",
+              "note": "",
+              "stage": "sketch",
+              "payment": "unpaid"
+            },
+            {
+              "id": "6f596189-4abc-4a6d-ab74-7e1844066cd4",
+              "title": "KC - Outfit Nov",
+              "note": "",
+              "stage": "lineart",
+              "payment": "half"
+            },
+            {
+              "id": "3b638030-752e-4df8-953e-7f282e680f66",
+              "title": "Chibi CC - Start Dec",
+              "note": "",
+              "stage": "sketch",
+              "payment": "half"
+            },
+            {
+              "id": "638c8191-4b98-4e93-985b-8c162d11b237",
+              "title": "ON - Start Mid Dec",
+              "note": "",
+              "stage": "waiting",
+              "payment": ""
+            },
+            {
+              "id": "5086b3c4-39cf-46e1-a105-bd5102ccafba",
+              "title": "RS - Start Jan",
+              "note": "",
+              "stage": "waiting",
+              "payment": ""
+            },
+            {
+              "id": "fd7585d8-8842-4f32-af7d-16386ebacbcc",
+              "title": "L - Start Feb",
+              "note": "",
+              "stage": "waiting",
+              "payment": ""
+            }
+          ]
+        },
+        {
+          "id": "961b4a5c-715b-4e52-9c65-9a46b12a4834",
+          "title": "Queue Illust",
+          "kind": "queue",
+          "cards": [
+            {
+              "id": "3edf1c15-b1bd-4012-aa11-8cd882cee109",
+              "title": "Lavatia 11 Character Colored Bust Sketch",
+              "note": "",
+              "stage": "sketch",
+              "payment": "paid"
+            },
+            {
+              "id": "6fbf87ab-3bba-49c0-a70e-ceccac71b6e1",
+              "title": "Reactive PistDeChio",
+              "note": "",
+              "stage": "waiting",
+              "payment": "unpaid"
+            },
+            {
+              "id": "634167a3-1d0c-41be-ae23-3cf9a708d4bc",
+              "title": "Reactive Taki",
+              "note": "",
+              "stage": "waiting",
+              "payment": "unpaid"
+            }
+          ]
+        },
+        {
+          "id": "47e99d33-2705-437f-a87b-82b87dd5a249",
+          "title": "Finished L2D 2026",
+          "kind": "finished",
+          "cards": [
+            {
+              "id": "87b70a9d-1343-4b60-a382-d8300ab666df",
+              "title": "SM - Sept",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "3b395a86-d256-420c-9aba-54ddee1ab61c",
+              "title": "Mascot AFR 2",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "47843591-05e4-4209-aca9-5c61a1ca58a6",
+              "title": "Mascot AFR 1",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "997c9956-60c1-4b2d-b6e4-4066a3901525",
+              "title": "ME - Start Aug",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "1d7fad18-b342-4651-ae0f-b661e3b0ae2f",
+              "title": "AFR Add Ons Toggle",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "3e982dfd-b0b1-4c3e-91c7-99d006d51743",
+              "title": "AFR 3",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "3ff08824-5c43-45e8-ad3f-06a21a77e048",
+              "title": "AFR 2",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "b44ef9d5-e49a-4e08-806f-f6bb0bca1a19",
+              "title": "AFR 1",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            }
+          ]
+        },
+        {
+          "id": "2b90bb84-cf52-4725-aa60-8a8f230f3145",
+          "title": "Finished Illust",
+          "kind": "finished",
+          "cards": [
+            {
+              "id": "19c73dfa-ebff-4622-ae78-4c85cc3de20d",
+              "title": "Gummy Clean Render",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "244536a9-412a-43ed-9ee4-58b437824c7c",
+              "title": "Background Aquila",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "56240b26-9a55-4f36-a89e-cc170edb0b27",
+              "title": "Add Ons Alfiegato",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "d518fc3c-b591-4900-910d-2fa44d861521",
+              "title": "Reign Sinborne Bust Full Render 2",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "a831c389-c4e8-432c-a956-868546ab3f7e",
+              "title": "Emote Zerion",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "39d71736-fe52-4b72-8320-11508a1697aa",
+              "title": "Emote KuroKami",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "f5c5fe00-b3f7-4976-a9c4-52cb52a9a979",
+              "title": "Emote Kazu",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            },
+            {
+              "id": "61ecb77e-8b4a-414d-913c-aec6a8c1c24b",
+              "title": "AFR Mascot Graphic",
+              "note": "",
+              "stage": "done",
+              "payment": "paid"
+            }
+          ]
+        }
+      ]
+    },
+    "commissions": {
+      "status": "waitlist",
+      "statusText": "Waitlist for Mar 2027",
+      "menus": [
+        {
+          "id": "1674aa6a-393e-47b0-bc3e-14c5c4341974",
+          "title": "L2D Model Art",
+          "currencies": ["USD (International)", "IDR (Local only)"],
+          "rows": [
+            {
+              "id": "21dba0db-e181-49fa-9504-6c215c4c5b70",
+              "name": "Full Body Model",
+              "prices": ["$450", "3,750JT"],
+              "heading": false
+            },
+            {
+              "id": "1b7ff60c-1eba-4eb8-827d-be0a960bc7ab",
+              "name": "Add-ons",
+              "prices": [],
+              "heading": true
+            },
+            {
+              "id": "9985548d-9790-4b8b-87e7-9b16c9d09649",
+              "name": "+ Basic Expression",
+              "prices": ["$5", "30rb"],
+              "heading": false
+            },
+            {
+              "id": "05d45dee-6ba0-4875-8c47-c96447814400",
+              "name": "+ Hand pose",
+              "prices": ["$15", "150rb"],
+              "heading": false
+            },
+            {
+              "id": "d2ac8a79-1653-48b9-a93d-27bab50f5d0f",
+              "name": "+ Leg pose",
+              "prices": ["$20", "180rb"],
+              "heading": false
+            },
+            {
+              "id": "9f48e14f-8077-491e-9ac7-a745a8b80a23",
+              "name": "+ Additional Hairstyle",
+              "prices": ["$30", "350rb"],
+              "heading": false
+            },
+            {
+              "id": "d34261f9-cb95-47e8-a741-38dca8cc4abb",
+              "name": "+ Small Asset",
+              "prices": ["$10", "75rb"],
+              "heading": false
+            },
+            {
+              "id": "c5b7418b-f288-4a86-a863-c5a188685fa0",
+              "name": "+ Big Asset",
+              "prices": ["$20", "180rb"],
+              "heading": false
+            },
+            {
+              "id": "e48652ee-6460-42b2-821c-8d6300f53d95",
+              "name": "+ Mascot/Pet",
+              "prices": ["$60", "550rb"],
+              "heading": false
+            },
+            {
+              "id": "a0365785-ad0b-429c-8071-da2f67c7c75b",
+              "name": "+ Alternative Outfit",
+              "prices": ["$125", "1,2JT"],
+              "heading": false
+            },
+            {
+              "id": "750bdfc2-1218-45c0-8a45-8c0ce849c7a6",
+              "name": "Designed by me",
+              "prices": ["$60+", "500rb+"],
+              "heading": false
+            }
+          ],
+          "includes": [
+            "Fully rendered full body model",
+            "4 basic expressions",
+            "Active update and communication",
+            "Rig-ready PSD file of your model"
+          ],
+          "note": "*Rigging is not included",
+          "images": []
+        }
+      ],
+      "terms": [
+        "I have the right to decline the commission if I can't fulfill the request.",
+        "Provide clear visual references for your character. Feel free to send as many as needed.",
+        "Preferred full payment upfront through PayPal / Local Bank (ID). Notify me for split payments (50% after sketch, 50% when the model is done).",
+        "I will actively update you with WIPs in the sketch and render phases, or when a specific part is done. You may ask about the progress.",
+        "Free revisions at the sketch phase; big revisions at the rendering phase have an additional charge.",
+        "Mistakes on my part will be fixed for free, but not if they were caused by unclear references sent by the commissioner.",
+        "The delivery date depends on the complexity of the design. If there's a tight deadline, please tell me beforehand (a rush fee might apply).",
+        "Do not use my art for AI or NFTs.",
+        "I have the right to use the artwork in my portfolio and on social media to promote my work. Commissioners may use the work for personal use and streams, but may not monetize it unless it was made and paid for commercial use.",
+        "Please credit me as the artist of your commissioned work.",
+        "No refunds unless I cancel your commission."
+      ],
+      "contact": "Interested in commissioning me? DM me on X / IG / Discord ♡  (X: @hunnipoffie · Discord: @hunhunni_.)"
+    },
+    "socials": [
+      {
+        "name": "YouTube",
+        "url": "#",
+        "style": "primary",
+        "featured": true
+      },
+      {
+        "name": "Twitch",
+        "url": "#",
+        "style": "secondary",
+        "featured": true
+      },
+      {
+        "name": "X",
+        "url": "#",
+        "style": "outline",
+        "featured": true
+      },
+      {
+        "name": "Discord",
+        "url": "#",
+        "style": "outline",
+        "featured": true
+      },
+      {
+        "name": "TikTok",
+        "url": "#",
+        "style": "outline",
+        "featured": false
+      }
+    ],
+    "schedule": [
+      {
+        "day": "Monday",
+        "time": "20:00",
+        "title": "Stream title",
+        "topic": "Game or topic"
+      },
+      {
+        "day": "Wednesday",
+        "time": "20:00",
+        "title": "Stream title",
+        "topic": "Game or topic"
+      },
+      {
+        "day": "Saturday",
+        "time": "18:00",
+        "title": "Stream title",
+        "topic": "Game or topic"
+      }
+    ],
+    "updates": [
+      {
+        "date": "2026-11-20",
+        "tag": "News",
+        "title": "Announcement title",
+        "body": "Events, milestones, and schedule changes show up here."
+      },
+      {
+        "date": "2026-11-10",
+        "tag": "Event",
+        "title": "Announcement title",
+        "body": "Another update with a bit more detail about what's happening."
+      },
+      {
+        "date": "2026-11-01",
+        "tag": "Schedule",
+        "title": "Announcement title",
+        "body": "Schedule changes and breaks are posted here too."
+      }
+    ],
+    "fanart": [
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Cute"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Chibi"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Cute"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Event"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Chibi"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Cute"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Event"
+      },
+      {
+        "image": "",
+        "artist": "@artist",
+        "artistUrl": "#",
+        "caption": "",
+        "tags": "Chibi"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "id": "6693da27-ef44-4dd3-9715-f5f0f3a7c84d",
+      "title": "Home",
+      "slug": "/",
+      "inNav": false,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Poffie — Get to know me",
+            "description": "Hi, I'm Poffie! Get to know me, my streams, and my art."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Columns",
+                  "props": {
+                    "column4": [],
+                    "column3": [],
+                    "column2": [
+                      {
+                        "type": "Image",
+                        "props": {
+                          "picture": {
+                            "src": "/starter/picture-1.webp",
+                            "x": 50,
+                            "y": 50,
+                            "zoom": 1
+                          },
+                          "alt": "Character art",
+                          "size": 100,
+                          "align": "center",
+                          "frame": "square",
+                          "shape": "rounded",
+                          "fit": "cover",
+                          "effects": {
+                            "brightness": 100,
+                            "saturation": 100,
+                            "blur": 0,
+                            "grayscale": false
+                          },
+                          "mask": {
+                            "src": "",
+                            "mode": "alpha",
+                            "fit": "contain",
+                            "size": 100,
+                            "x": 50,
+                            "y": 50,
+                            "invert": false
+                          },
+                          "blend": {
+                            "src": "",
+                            "mode": "overlay",
+                            "opacity": 60,
+                            "fit": "cover"
+                          },
+                          "link": "",
+                          "style": {},
+                          "id": "Image-b175ec34-787a-4cd5-a4f8-4541e855632d"
+                        }
+                      }
+                    ],
+                    "column1": [
+                      {
+                        "type": "Badge",
+                        "props": {
+                          "label": "VTuber",
+                          "style": "secondary",
+                          "size": "lg",
+                          "id": "Badge-e8ac93ce-84f8-4c5d-9e0f-dd3680813377"
+                        }
+                      },
+                      {
+                        "type": "Heading",
+                        "props": {
+                          "text": "Hi, I'm <strong>Poffie</strong>!",
+                          "level": "h1",
+                          "size": "display",
+                          "color": "default",
+                          "align": "auto",
+                          "style": {},
+                          "id": "Heading-f5585c46-2ef6-4fa8-bc5e-4427ed6ca58e"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "text": "A short welcome message goes here: who I am, what I stream, and why you should stay a while.",
+                          "size": "lg",
+                          "color": "muted",
+                          "bold": false,
+                          "narrow": true,
+                          "align": "auto",
+                          "style": {},
+                          "id": "Text-850abc34-ebec-499d-b9a1-7226c6a7e29d"
+                        }
+                      },
+                      {
+                        "type": "SocialLinks",
+                        "props": {
+                          "which": "featured",
+                          "layout": "row",
+                          "size": "md",
+                          "style": {},
+                          "id": "SocialLinks-66ab35db-b5c4-4944-be15-737559282860"
+                        }
+                      }
+                    ],
+                    "layout": "2",
+                    "gap": "lg",
+                    "verticalAlign": "center",
+                    "style": {},
+                    "id": "Columns-0a71a3d8-db34-4e1c-8562-a090b6bdb581"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-60069037-7a86-4f61-9810-e0a61feb5ad5"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "About me",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-1a69fc92-9512-4701-a46d-44d8001bdef6"
+                  }
+                },
+                {
+                  "type": "Columns",
+                  "props": {
+                    "column4": [],
+                    "column3": [],
+                    "column2": [
+                      {
+                        "type": "Facts",
+                        "props": {
+                          "facts": [
+                            {
+                              "label": "Birthday",
+                              "value": "—"
+                            },
+                            {
+                              "label": "Height",
+                              "value": "—"
+                            },
+                            {
+                              "label": "Debut",
+                              "value": "—"
+                            },
+                            {
+                              "label": "Fan name",
+                              "value": "—"
+                            }
+                          ],
+                          "style": "list",
+                          "columns": 3,
+                          "id": "Facts-1d75681e-207c-4550-b1ec-f9a7a80ddb5c"
+                        }
+                      }
+                    ],
+                    "column1": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "text": "Bio goes here. Keep it friendly and short; visitors are here to get to know her, so this is the heart of the site.",
+                          "size": "md",
+                          "color": "default",
+                          "bold": false,
+                          "narrow": false,
+                          "align": "auto",
+                          "style": {},
+                          "id": "Text-1f0b3a33-d166-4336-a39f-370eba9ebd05"
+                        }
+                      }
+                    ],
+                    "layout": "2-wide-left",
+                    "gap": "lg",
+                    "verticalAlign": "start",
+                    "style": {},
+                    "id": "Columns-093912a8-85cd-4e63-bb49-b6c5f3e25248"
+                  }
+                },
+                {
+                  "type": "Button",
+                  "props": {
+                    "label": "More about me",
+                    "link": "/about",
+                    "style": "outline",
+                    "size": "sm",
+                    "id": "Button-925db69f-dc57-44e2-ae36-2333f3ce2c2a"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-562c613b-1429-4fe4-9276-0797cc3405a6"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Commission queue",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-192b74e1-5fe4-4191-a6bb-91d4cf92a4df"
+                  }
+                },
+                {
+                  "type": "CommissionStatus",
+                  "props": {
+                    "style": {},
+                    "id": "CommissionStatus-327e0b71-b18d-4c6e-a888-e25e5dabba60"
+                  }
+                },
+                {
+                  "type": "CommissionQueue",
+                  "props": {
+                    "show": "queue",
+                    "limit": 3,
+                    "progress": true,
+                    "layout": "board",
+                    "style": {},
+                    "id": "CommissionQueue-5e300d84-6991-45f4-aea4-a031a1427990"
+                  }
+                },
+                {
+                  "type": "Button",
+                  "props": {
+                    "label": "See the full queue",
+                    "link": "/queue",
+                    "style": "outline",
+                    "size": "sm",
+                    "id": "Button-88002e37-2721-4a18-a2f9-f640b751856f"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-c3d9540c-1a9e-4131-919c-aeb46c92a6fd"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Latest update",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-b1c3bd7d-5515-473d-ac73-cf9c7221a9ca"
+                  }
+                },
+                {
+                  "type": "Updates",
+                  "props": {
+                    "limit": 1,
+                    "style": {},
+                    "id": "Updates-eb3b7589-624c-425a-9915-cab5ffeecc3f"
+                  }
+                },
+                {
+                  "type": "Button",
+                  "props": {
+                    "label": "All updates",
+                    "link": "/updates",
+                    "style": "outline",
+                    "size": "sm",
+                    "id": "Button-d7ea8d69-926e-4b7e-a697-fed46d7a9a33"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-b7d4c068-dd79-4ddc-b42b-3148ab25db56"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Fanart",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-9bbe16f1-cbe9-423b-852f-cf1848cbb0e9"
+                  }
+                },
+                {
+                  "type": "FanartGallery",
+                  "props": {
+                    "limit": 4,
+                    "columns": 4,
+                    "showFilter": false,
+                    "style": {},
+                    "id": "FanartGallery-5e72ae5b-d5c5-4f16-9e9e-aac4e2d1f26b"
+                  }
+                },
+                {
+                  "type": "Button",
+                  "props": {
+                    "label": "See the gallery",
+                    "link": "/fanart",
+                    "style": "outline",
+                    "size": "sm",
+                    "id": "Button-60c6a30d-48ba-498c-aa52-0ad8352839bc"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-6e9b070e-48f8-4c0e-a296-2d7dd88a0087"
+            }
+          }
+        ],
+        "zones": {}
+      }
+    },
+    {
+      "id": "3b67080e-52af-4997-b21c-528fa62c8a06",
+      "title": "About",
+      "slug": "/about",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "About — Poffie",
+            "description": "Get to know Poffie: profile, lore, likes, and FAQ."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Columns",
+                  "props": {
+                    "column4": [],
+                    "column3": [],
+                    "column2": [
+                      {
+                        "type": "Image",
+                        "props": {
+                          "picture": {
+                            "src": "/starter/picture-2.webp",
+                            "x": 50,
+                            "y": 50,
+                            "zoom": 1.1
+                          },
+                          "alt": "Character art",
+                          "size": 100,
+                          "align": "center",
+                          "frame": "square",
+                          "shape": "blob",
+                          "fit": "cover",
+                          "effects": {
+                            "brightness": 100,
+                            "saturation": 100,
+                            "blur": 0,
+                            "grayscale": false,
+                            "flip": ""
+                          },
+                          "mask": {
+                            "src": "",
+                            "mode": "alpha",
+                            "fit": "contain",
+                            "size": 100,
+                            "x": 50,
+                            "y": 50,
+                            "invert": false
+                          },
+                          "blend": {
+                            "src": "",
+                            "mode": "overlay",
+                            "opacity": 60,
+                            "fit": "cover"
+                          },
+                          "link": "",
+                          "style": {
+                            "padding": "0px",
+                            "padX": "0px",
+                            "height": "0px"
+                          },
+                          "id": "Image-3307e54f-a450-4ac6-8e86-c40f9a9633c9"
+                        }
+                      }
+                    ],
+                    "column1": [
+                      {
+                        "type": "Badge",
+                        "props": {
+                          "label": "VTuber",
+                          "style": "secondary",
+                          "size": "lg",
+                          "id": "Badge-76469a9e-db68-455a-acbf-67f338ded907"
+                        }
+                      },
+                      {
+                        "type": "Heading",
+                        "props": {
+                          "text": "About <strong>Poffie</strong>",
+                          "level": "h1",
+                          "size": "display",
+                          "color": "default",
+                          "align": "auto",
+                          "style": {},
+                          "id": "Heading-8a94c828-f470-4309-955d-9399fc2232e9"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "text": "Bio goes here. Keep it friendly and short; visitors are here to get to know her, so this is the heart of the site.",
+                          "size": "lg",
+                          "color": "muted",
+                          "bold": false,
+                          "narrow": true,
+                          "align": "auto",
+                          "style": {},
+                          "id": "Text-e164d80c-a906-4233-b156-e260b1a4d20e"
+                        }
+                      }
+                    ],
+                    "layout": "2",
+                    "gap": "lg",
+                    "verticalAlign": "center",
+                    "style": {},
+                    "id": "Columns-4ba1256c-dfff-4876-a072-144ba43bcd0e"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-76d42c0d-9af8-44f5-bb99-ebcb79f35e97"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Profile",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-d2343bf6-ffbd-4fcf-8b76-7b5563c26601"
+                  }
+                },
+                {
+                  "type": "Facts",
+                  "props": {
+                    "facts": [
+                      {
+                        "label": "Birthday",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Height",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Debut",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Fan name",
+                        "value": "—"
+                      },
+                      {
+                        "label": "Streams",
+                        "value": "Games, chatting"
+                      },
+                      {
+                        "label": "Language",
+                        "value": "—"
+                      }
+                    ],
+                    "style": "tiles",
+                    "columns": 3,
+                    "id": "Facts-088fe140-2088-4027-adaa-b7b37f50626e"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-aaa8501b-0f1f-44f1-af02-39c478bb4986"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Lore",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-5aee8ce5-e0ef-47bf-918b-150c9a79b7a7"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "Character lore goes here: where she comes from, what she is, and the little story behind the model.",
+                    "size": "md",
+                    "color": "default",
+                    "bold": false,
+                    "narrow": true,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-801a139c-44c0-45ea-bb65-32e485ebce73"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-713c2ad9-6b1d-4682-8418-e8daeb46efdc"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Likes & dislikes",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-d19082e1-f0db-402b-9831-173cd7ff1a2f"
+                  }
+                },
+                {
+                  "type": "Columns",
+                  "props": {
+                    "column4": [],
+                    "column3": [],
+                    "column2": [
+                      {
+                        "type": "Card",
+                        "props": {
+                          "blocks": [
+                            {
+                              "type": "Heading",
+                              "props": {
+                                "text": "Dislikes",
+                                "level": "h3",
+                                "size": "sm",
+                                "color": "default",
+                                "align": "auto",
+                                "style": {},
+                                "id": "Heading-23f54fff-b027-4854-a135-f70e62de2370"
+                              }
+                            },
+                            {
+                              "type": "BadgeList",
+                              "props": {
+                                "items": [
+                                  {
+                                    "label": "Dislike one"
+                                  },
+                                  {
+                                    "label": "Dislike two"
+                                  }
+                                ],
+                                "style": "outline",
+                                "size": "lg",
+                                "id": "BadgeList-453f7222-d626-4071-a6a3-0283bca8f21c"
+                              }
+                            }
+                          ],
+                          "padding": "md",
+                          "gap": "sm",
+                          "style": {
+                            "bg": "theme:base-200",
+                            "radius": "theme"
+                          },
+                          "id": "Card-8eafc212-ead0-4771-8907-9d2753fd113d"
+                        }
+                      }
+                    ],
+                    "column1": [
+                      {
+                        "type": "Card",
+                        "props": {
+                          "blocks": [
+                            {
+                              "type": "Heading",
+                              "props": {
+                                "text": "Likes",
+                                "level": "h3",
+                                "size": "sm",
+                                "color": "default",
+                                "align": "auto",
+                                "style": {},
+                                "id": "Heading-a159c633-d80c-43fc-8a2d-179246d4f444"
+                              }
+                            },
+                            {
+                              "type": "BadgeList",
+                              "props": {
+                                "items": [
+                                  {
+                                    "label": "Like one"
+                                  },
+                                  {
+                                    "label": "Like two"
+                                  },
+                                  {
+                                    "label": "Like three"
+                                  },
+                                  {
+                                    "label": "Like four"
+                                  }
+                                ],
+                                "style": "primary",
+                                "size": "lg",
+                                "id": "BadgeList-8b204a63-2027-44d5-87ff-725ddf60bb10"
+                              }
+                            }
+                          ],
+                          "padding": "md",
+                          "gap": "sm",
+                          "style": {
+                            "bg": "theme:base-200",
+                            "radius": "theme"
+                          },
+                          "id": "Card-743a56a1-92d2-4da2-a292-53727f799fa0"
+                        }
+                      }
+                    ],
+                    "layout": "2",
+                    "gap": "lg",
+                    "verticalAlign": "start",
+                    "style": {},
+                    "id": "Columns-62cb27e9-ed63-4181-89cc-d188b4274965"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-a2b64ef9-9bbc-443a-976b-b5a38e041baf"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "FAQ",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-af51d782-62aa-4f07-9608-5aa2f5088f55"
+                  }
+                },
+                {
+                  "type": "FAQ",
+                  "props": {
+                    "items": [
+                      {
+                        "question": "What does she stream?",
+                        "answer": "Answer goes here."
+                      },
+                      {
+                        "question": "Can I draw fanart?",
+                        "answer": "Answer goes here, including which hashtag to use."
+                      },
+                      {
+                        "question": "Can I clip the streams?",
+                        "answer": "Answer goes here."
+                      }
+                    ],
+                    "style": {},
+                    "id": "FAQ-6b409de5-5e8b-45d9-acd5-f118477d349f"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-d7b0021b-f366-482a-bf8d-fca302d4a8eb"
+            }
+          }
+        ],
+        "zones": {}
+      }
+    },
+    {
+      "id": "26fab391-2c2d-4d73-b524-a1029d1e96d9",
+      "title": "Queue",
+      "slug": "/queue",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Queue — Poffie",
+            "description": "Poffie's commission queue: what she's working on, what's next, and what's finished."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Commission <strong>queue</strong>",
+                    "level": "h1",
+                    "size": "display",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-07d056a9-b029-4685-868f-4b6033deaeba"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "Where every commission is right now. Top of each list = next up.",
+                    "size": "lg",
+                    "color": "muted",
+                    "bold": false,
+                    "narrow": true,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-ee255abb-549a-4e9d-bfc6-910a254b4679"
+                  }
+                },
+                {
+                  "type": "CommissionStatus",
+                  "props": {
+                    "style": {},
+                    "id": "CommissionStatus-bb0595e9-2d3f-4451-a736-0057ce5d5ff6"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-5b86fb43-c501-40ce-b0f9-50bb926dddb7"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "CommissionQueue",
+                  "props": {
+                    "show": "all",
+                    "limit": 0,
+                    "progress": true,
+                    "layout": "board",
+                    "style": {},
+                    "id": "CommissionQueue-dc7210e9-ceea-484b-8765-ffa1e4bd576a"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "wide",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-651b5cc5-56c6-4855-bff0-2e6e159a72ed"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Button",
+                  "props": {
+                    "label": "Commission info & prices",
+                    "link": "/commissions",
+                    "style": "outline",
+                    "size": "sm",
+                    "id": "Button-db8bb4a0-feb5-440f-8057-37e29c111dd5"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-4d8c389b-a186-4cbf-873b-16b3903bdd40"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "7fea90a8-9b69-4c3b-b130-354a809e18c0",
+      "title": "Commissions",
+      "slug": "/commissions",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Commissions — Poffie",
+            "description": "Poffie's commission info: prices, what's included, and terms of service."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Commission <strong>info</strong>",
+                    "level": "h1",
+                    "size": "display",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-42bc399d-e6d0-4e8c-b5a9-74183fe140a8"
+                  }
+                },
+                {
+                  "type": "CommissionStatus",
+                  "props": {
+                    "style": {},
+                    "id": "CommissionStatus-0d142489-ae61-49a0-aab8-79a6ed4b363a"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "Please read everything before reaching out ♡",
+                    "size": "lg",
+                    "color": "muted",
+                    "bold": false,
+                    "narrow": true,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-d8535386-61c6-4d4f-a9b3-1ed32ff66970"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-31be4e6b-ef29-4e84-a1be-920e11093405"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "CommissionPrices",
+                  "props": {
+                    "images": true,
+                    "style": {},
+                    "id": "CommissionPrices-cf0d2b23-468d-4e33-a243-33c6f33e5d27"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-87f3390e-2195-4d9c-af28-f9c9a8f6f92d"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "⟡ Terms of Service ⟡",
+                    "level": "h2",
+                    "size": "lg",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-6dca095c-abc8-4db3-a747-bb1f8a508018"
+                  }
+                },
+                {
+                  "type": "CommissionTerms",
+                  "props": {
+                    "contact": true,
+                    "style": {},
+                    "id": "CommissionTerms-dbe3b847-682f-4b0b-a194-babf78b7a932"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-66eb7595-60e4-4ea9-bc39-edf5c8c5ab19"
+            }
+          },
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Button",
+                  "props": {
+                    "label": "See the queue",
+                    "link": "/queue",
+                    "style": "outline",
+                    "size": "sm",
+                    "id": "Button-89eaf9ae-11a4-4ab5-808d-c854e4f7c8db"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "md",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-854b8bde-2d3f-4ec1-b8b2-b9ca096c0d3b"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "1361b0e7-d65a-408c-80ca-83a4c4b43082",
+      "title": "Updates",
+      "slug": "/updates",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Updates — Poffie",
+            "description": "News, events, milestones, and schedule changes from Poffie."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Updates",
+                    "level": "h1",
+                    "size": "display",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-2cfda333-048d-40a2-bd4d-3f17610293dd"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "News, events, milestones, and schedule changes.",
+                    "size": "lg",
+                    "color": "muted",
+                    "bold": false,
+                    "narrow": true,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-cbb16ff6-74be-46ea-ab8d-c7e8b7fe9b54"
+                  }
+                },
+                {
+                  "type": "Updates",
+                  "props": {
+                    "limit": 0,
+                    "style": {},
+                    "id": "Updates-e3225a90-b562-4d9b-ac17-e6dd75d2b8dc"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "narrow",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-526b2b8c-e92c-4b73-b539-81f1b0a781b8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "b86bc748-0ec9-4282-a8c2-bcca689f5c98",
+      "title": "Fanart",
+      "slug": "/fanart",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Fanart — Poffie",
+            "description": "Fanart of Poffie from the community, with credit to every artist."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Fanart",
+                    "level": "h1",
+                    "size": "display",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-78a89d08-8b7a-41a8-bd7f-e78144c603de"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "Art made by the community. Every piece is credited to its artist; tap a name to see more of their work. Post yours with #PoffieArt for a chance to be featured.",
+                    "size": "lg",
+                    "color": "muted",
+                    "bold": false,
+                    "narrow": true,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-84bc7b28-c9dd-447d-982c-caa03149810d"
+                  }
+                },
+                {
+                  "type": "FanartGallery",
+                  "props": {
+                    "limit": 0,
+                    "columns": 4,
+                    "showFilter": true,
+                    "style": {},
+                    "id": "FanartGallery-5267ce36-34cb-4c30-8f61-302db0b03a49"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-a3be2119-f013-4c6d-86d2-7fcb41e6f411"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "93be1ddc-3733-4a47-8c97-56690d042c9c",
+      "title": "Links",
+      "slug": "/links",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Links — Poffie",
+            "description": "All of Poffie's official accounts in one place."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "free": [],
+              "blocks": [
+                {
+                  "type": "Image",
+                  "props": {
+                    "picture": {
+                      "src": "/starter/picture-3.webp",
+                      "x": 50,
+                      "y": 50,
+                      "zoom": 1
+                    },
+                    "alt": "Avatar",
+                    "size": 60,
+                    "align": "center",
+                    "frame": "wide",
+                    "shape": "rectangle",
+                    "fit": "contain",
+                    "effects": {
+                      "brightness": 100,
+                      "saturation": 100,
+                      "blur": 0,
+                      "grayscale": false
+                    },
+                    "mask": {
+                      "src": "",
+                      "mode": "alpha",
+                      "fit": "contain",
+                      "size": 100,
+                      "x": 50,
+                      "y": 50,
+                      "invert": false
+                    },
+                    "blend": {
+                      "src": "",
+                      "mode": "overlay",
+                      "opacity": 60,
+                      "fit": "cover"
+                    },
+                    "link": "",
+                    "style": {},
+                    "id": "Image-f2cc81b2-aaf7-4e1b-92a9-ec5d8baf8bbf"
+                  }
+                },
+                {
+                  "type": "SocialLinks",
+                  "props": {
+                    "which": "all",
+                    "layout": "list",
+                    "size": "lg",
+                    "style": {},
+                    "id": "SocialLinks-cb802625-d225-46fe-ab83-b720359a7a48"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "These are my only official accounts. For business inquiries, see the Contact page.",
+                    "size": "sm",
+                    "color": "muted",
+                    "bold": false,
+                    "narrow": false,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-30ee64bb-f4f8-452d-a5b7-5f0454ea4ef3"
+                  }
+                }
+              ],
+              "height": 0,
+              "width": "narrow",
+              "spacing": "lg",
+              "gap": "md",
+              "align": "center",
+              "style": {},
+              "id": "Section-fe12cd1c-1ebd-457b-a0bd-e6059195abfa"
+            }
+          }
+        ],
+        "zones": {}
+      }
+    },
+    {
+      "id": "f4368c68-159f-4c32-bb58-4e6ef1dd13a1",
+      "title": "Contact",
+      "slug": "/contact",
+      "inNav": true,
+      "data": {
+        "root": {
+          "props": {
+            "title": "Contact — Poffie",
+            "description": "How to contact Poffie for business inquiries, and where fans can say hi."
+          }
+        },
+        "content": [
+          {
+            "type": "Section",
+            "props": {
+              "blocks": [
+                {
+                  "type": "Heading",
+                  "props": {
+                    "text": "Contact",
+                    "level": "h1",
+                    "size": "display",
+                    "color": "default",
+                    "align": "auto",
+                    "style": {},
+                    "id": "Heading-73e753b0-4758-440b-89eb-31023324c73f"
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "text": "Business inquiries go by email. For everything else, come say hi on stream or in Discord!",
+                    "size": "lg",
+                    "color": "muted",
+                    "bold": false,
+                    "narrow": true,
+                    "align": "auto",
+                    "style": {},
+                    "id": "Text-7aa61134-d468-48a9-964a-b4406e2c14db"
+                  }
+                },
+                {
+                  "type": "Columns",
+                  "props": {
+                    "layout": "2",
+                    "gap": "lg",
+                    "verticalAlign": "start",
+                    "column1": [
+                      {
+                        "type": "Card",
+                        "props": {
+                          "blocks": [
+                            {
+                              "type": "Heading",
+                              "props": {
+                                "text": "Business inquiries",
+                                "level": "h2",
+                                "size": "md",
+                                "color": "default",
+                                "align": "auto",
+                                "style": {},
+                                "id": "Heading-f60fe4a7-5f12-45e5-b18f-106a7be1f96c"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "props": {
+                                "text": "Sponsorships, collaborations, commissions, and other work. Please include:",
+                                "size": "md",
+                                "color": "default",
+                                "bold": false,
+                                "narrow": false,
+                                "align": "auto",
+                                "style": {},
+                                "id": "Text-82f1c965-b3dd-46d2-a8ce-4fa22fadc0fa"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "props": {
+                                "text": "• Who you are and the company or project\n• What you'd like to do together\n• Dates, deadlines, and budget if you have them",
+                                "size": "md",
+                                "color": "default",
+                                "bold": false,
+                                "narrow": false,
+                                "align": "auto",
+                                "style": {},
+                                "id": "Text-a9db756e-672d-4018-b497-fa727e41ea82"
+                              }
+                            },
+                            {
+                              "type": "Button",
+                              "props": {
+                                "label": "Email me",
+                                "link": "mailto:business@example.com",
+                                "style": "primary",
+                                "size": "md",
+                                "id": "Button-fdd326d5-8087-4422-833f-334290f51648"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "props": {
+                                "text": "business@example.com",
+                                "size": "sm",
+                                "color": "muted",
+                                "bold": false,
+                                "narrow": false,
+                                "align": "auto",
+                                "style": {},
+                                "id": "Text-46f5605d-424f-42e7-a0ad-7f474a925b63"
+                              }
+                            }
+                          ],
+                          "padding": "lg",
+                          "gap": "md",
+                          "style": {
+                            "bg": "theme:base-200",
+                            "radius": "theme"
+                          },
+                          "id": "Card-f8b0a49e-b04e-4752-883d-855d8be5e522"
+                        }
+                      }
+                    ],
+                    "column2": [
+                      {
+                        "type": "Card",
+                        "props": {
+                          "blocks": [
+                            {
+                              "type": "Heading",
+                              "props": {
+                                "text": "Fans",
+                                "level": "h2",
+                                "size": "md",
+                                "color": "default",
+                                "align": "auto",
+                                "style": {},
+                                "id": "Heading-1cce7e87-fc50-499c-a1ab-8552cefa4580"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "props": {
+                                "text": "The email above is for business only. The best places to talk to me are chat during streams and the Discord server.",
+                                "size": "md",
+                                "color": "default",
+                                "bold": false,
+                                "narrow": false,
+                                "align": "auto",
+                                "style": {},
+                                "id": "Text-e1955b3f-afe8-40f2-857d-8c0d28d33dce"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "props": {
+                                "text": "Made fanart? Post it with #PoffieArt.",
+                                "size": "md",
+                                "color": "default",
+                                "bold": false,
+                                "narrow": false,
+                                "align": "auto",
+                                "style": {},
+                                "id": "Text-c8df2e1a-eb9f-46ad-ab34-fedbe98ebff0"
+                              }
+                            },
+                            {
+                              "type": "SocialLinks",
+                              "props": {
+                                "which": "featured",
+                                "layout": "row",
+                                "size": "md",
+                                "style": {},
+                                "id": "SocialLinks-ffd30ee9-3df4-4407-88e2-11dfacdba3aa"
+                              }
+                            }
+                          ],
+                          "padding": "lg",
+                          "gap": "md",
+                          "style": {
+                            "radius": "theme",
+                            "borderWidth": 1
+                          },
+                          "id": "Card-e2328c8a-ea82-499d-a9a0-c5390af6a26a"
+                        }
+                      }
+                    ],
+                    "column3": [],
+                    "column4": [],
+                    "style": {},
+                    "id": "Columns-42170044-aec3-442e-bc1f-60a984f04f1b"
+                  }
+                }
+              ],
+              "free": [],
+              "height": 0,
+              "width": "normal",
+              "spacing": "lg",
+              "gap": "lg",
+              "align": "left",
+              "style": {},
+              "id": "Section-a99e0aec-a6c0-4244-a208-05d890b09c95"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

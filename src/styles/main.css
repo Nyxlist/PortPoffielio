@@ -1,0 +1,500 @@
+@import "tailwindcss";
+@import "@fontsource-variable/nunito";
+@import "@fontsource-variable/quicksand";
+@import "@fontsource-variable/fredoka";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/poppins/800.css";
+@import "./extras.css";
+
+/* daisyUI: readable component classes (btn, card, badge…) on top of Tailwind. */
+@plugin "daisyui" {
+  themes: false;
+}
+
+/*
+  Design tokens — the single source of truth for colors, radius and font.
+  These are mirrored as Figma variables, so keep names in sync when changing them.
+  They are only the fallback: the Theme panel in the editor overrides them at runtime
+  (see src/lib/theme.js).
+*/
+@plugin "daisyui/theme" {
+  name: "site";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #fffafc;
+  --color-base-200: #fbeff5;
+  --color-base-300: #f3dde8;
+  --color-base-content: #3b2a35;
+
+  --color-primary: #e86fa5;
+  --color-primary-content: #ffffff;
+  --color-secondary: #8b7cf6;
+  --color-secondary-content: #ffffff;
+  --color-accent: #4cc9c0;
+  --color-accent-content: #10302d;
+  --color-neutral: #3b2a35;
+  --color-neutral-content: #fffafc;
+
+  --color-info: #5aa9e6;
+  --color-info-content: #0b2236;
+  --color-success: #5cc58a;
+  --color-success-content: #0e2c1a;
+  --color-warning: #f2b84b;
+  --color-warning-content: #3a2706;
+  --color-error: #e5566b;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* In the editor: stop the browser from "picking up" links and images, which fights block dragging. */
+.is-editing a,
+.is-editing img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Headings use the theme's heading font (set in the editor's Theme panel). */
+[data-theme="site"] :is(h1, h2, h3, h4) {
+  font-family: var(--font-heading, var(--font-sans));
+}
+
+@theme {
+  --font-sans: "Nunito Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------- Themed scene behind the page (src/site/scene) ---------- */
+.scene-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict; /* keeps scene animation work from spreading to the rest of the page */
+}
+.scene-orb {
+  position: absolute;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+.scene-cloud {
+  position: absolute;
+  left: -30%;
+  animation: scene-drift linear infinite;
+}
+.scene-ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22vh;
+  overflow: hidden;
+}
+.scene-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  animation: scene-wave linear infinite;
+}
+.scene-tree-wrap {
+  position: absolute;
+  bottom: 0;
+  height: min(70vh, 560px);
+}
+.scene-tree-wrap.scene-right {
+  right: -3vw;
+}
+.scene-tree-wrap.scene-left {
+  left: -3vw;
+  transform: scaleX(-1);
+}
+.scene-tree {
+  height: 100%;
+  width: auto;
+}
+@media (max-width: 767px) {
+  .scene-tree-wrap {
+    height: 38vh;
+    opacity: 0.6;
+  }
+}
+
+.scene-particles {
+  position: absolute;
+  inset: 0;
+}
+.scene-p {
+  position: absolute;
+  top: -6vh;
+  display: block;
+  will-change: transform; /* animate on the graphics card */
+}
+.scene-fall .scene-p {
+  animation: scene-fall linear infinite;
+}
+.scene-rise .scene-p {
+  top: auto;
+  bottom: -6vh;
+  animation: scene-rise linear infinite;
+}
+.scene-twinkle .scene-p {
+  animation: scene-twinkle ease-in-out infinite;
+}
+.scene-p-sway {
+  display: block;
+  animation: scene-sway ease-in-out infinite alternate;
+}
+.scene-twinkle .scene-p-sway {
+  animation: none;
+}
+.scene-snow {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 6px #fff;
+}
+.scene-bubble {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: 2px solid rgb(255 255 255 / 0.85);
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgb(255 255 255 / 0.7),
+    transparent 60%
+  );
+}
+.scene-star {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 6px 2px rgb(255 255 255 / 0.7);
+}
+
+.scene-tall {
+  height: 34vh;
+}
+.scene-rainbow {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  width: min(80vw, 900px);
+  transform: translateX(-50%);
+}
+.scene-firefly {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #fff6a8;
+  box-shadow: 0 0 10px 4px rgb(255 236 120 / 0.7);
+}
+.scene-wander .scene-p {
+  animation: scene-wander ease-in-out infinite alternate;
+}
+.scene-wander .scene-p-sway {
+  animation: scene-twinkle 2.5s ease-in-out infinite;
+}
+.scene-shooting {
+  display: block;
+  width: 120px;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, #fff);
+  box-shadow: 0 0 8px #fff;
+  transform: rotate(-30deg);
+}
+.scene-shoot .scene-p {
+  opacity: 0;
+  animation: scene-shoot linear infinite;
+}
+.scene-shoot .scene-p-sway {
+  animation: none;
+}
+.scene-lantern {
+  filter: drop-shadow(0 0 8px rgb(255 190 90 / 0.8));
+}
+.scene-confetti {
+  display: block;
+  width: 7px;
+  height: 11px;
+  border-radius: 2px;
+}
+
+@keyframes scene-wander {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(4vw, -3vh);
+  }
+  100% {
+    transform: translate(-3vw, 2vh);
+  }
+}
+/* A quick streak, then a long pause before the next one. */
+@keyframes scene-shoot {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0;
+    transform: translate(-30vw, 18vw);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-30vw, 18vw);
+  }
+}
+
+@keyframes scene-fall {
+  from {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(var(--drift), 115vh, 0) rotate(var(--spin));
+  }
+}
+@keyframes scene-rise {
+  from {
+    transform: translate3d(0, 10vh, 0);
+  }
+  to {
+    transform: translate3d(var(--drift), -115vh, 0);
+  }
+}
+@keyframes scene-twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes scene-sway {
+  from {
+    transform: translateX(-14px);
+  }
+  to {
+    transform: translateX(14px);
+  }
+}
+@keyframes scene-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(170vw);
+  }
+}
+@keyframes scene-wave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* People who ask their device for less motion get a still scene. */
+@media (prefers-reduced-motion: reduce) {
+  .scene-layer,
+  .scene-layer * {
+    animation: none !important;
+  }
+  .scene-fall,
+  .scene-rise,
+  .scene-shoot {
+    display: none;
+  }
+}
+
+/* Readability veil: a frosted panel behind each section's content so text stays readable over the scene. */
+[data-scene-veil="soft"] main section > div,
+[data-scene-veil="strong"] main section > div {
+  /* No backdrop blur: blurring the animated scene every frame was the main source of lag. */
+  background: color-mix(in srgb, var(--color-base-100) 72%, transparent);
+  border-radius: var(--radius-box);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* Keep a little gap from the window edges when the window is about as wide as the panel. */
+  width: calc(100% - 2rem);
+}
+[data-scene-veil="strong"] main section > div {
+  background: color-mix(in srgb, var(--color-base-100) 88%, transparent);
+}
+
+/* ---------- Smooth loading ---------- */
+/* Keep room for the scrollbar so pages don't shift sideways when one gets taller. */
+/* Only on the public site: the editor never scrolls, so there it would leave a dead strip. */
+html.is-site {
+  scrollbar-gutter: stable;
+}
+/* No style animations until the page has drawn once (stops cards/buttons flashing). */
+[data-theme="site"]:not([data-ready]),
+[data-theme="site"]:not([data-ready]) * {
+  transition: none !important;
+}
+/* Gentle fade when moving to another page. */
+.page-enter {
+  animation: page-enter 0.22s ease-out;
+}
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}
+
+/* ---------- Click & scroll effects (src/site/effects) ---------- */
+.fx-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  overflow: hidden;
+}
+.fx-piece {
+  position: absolute;
+  display: block;
+  margin: -0.5em 0 0 -0.5em;
+  animation: fx-burst 0.75s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+.fx-text {
+  width: auto !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+@keyframes fx-burst {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.4) rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(1) rotate(var(--rot));
+  }
+}
+.fx-ripple {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border-radius: 9999px;
+  border: 3px solid var(--color-primary);
+  animation: fx-ripple 0.6s ease-out forwards;
+}
+@keyframes fx-ripple {
+  to {
+    opacity: 0;
+    transform: scale(6);
+  }
+}
+.fx-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 70;
+  transform-origin: 0 50%;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  pointer-events: none;
+}
+
+/* Sections animate in the first time they scroll into view. */
+[data-reveal] main section {
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+[data-reveal] main section:not(.is-visible) {
+  opacity: 0;
+}
+[data-reveal="rise"] main section:not(.is-visible) {
+  transform: translateY(40px);
+}
+[data-reveal="zoom"] main section:not(.is-visible) {
+  transform: scale(0.94);
+}
+[data-reveal="slide"] main section:not(.is-visible) {
+  transform: translateX(-50px);
+}
+[data-reveal="blur"] main section:not(.is-visible) {
+  filter: blur(10px);
+}
+
+/* Parallax: far-away scenery drifts up slowly as you scroll. */
+.scene-parallax-on .scene-orb,
+.scene-parallax-on .scene-cloud,
+.scene-parallax-on .scene-rainbow {
+  translate: 0 calc(var(--scroll-progress, 0) * -14vh);
+}
+
+/* Stickers she uploads, pinned on the page. */
+.scene-sticker {
+  position: absolute;
+  width: auto;
+  max-width: 40vw;
+  object-fit: contain;
+}
+.scene-bob {
+  animation: scene-bob 4s ease-in-out infinite alternate;
+}
+/* --cx keeps centered stickers centered while they bob. */
+@keyframes scene-bob {
+  from {
+    translate: var(--cx, 0) 0;
+  }
+  to {
+    translate: var(--cx, 0) -12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-layer {
+    display: none;
+  }
+  [data-reveal] main section {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .scene-bob {
+    animation: none;
+  }
+}

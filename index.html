@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Poffie</title>
+    <meta name="description" content="" />
+    <!-- Paint the site's background color right away (remembered from the last visit). -->
+    <script>
+      try {
+        const bg = localStorage.getItem("site-bg");
+        if (/^#[0-9a-f]{6}$/i.test(bg))
+          document.documentElement.style.background = bg;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+/* ---------- Free placement (see src/builder/free) ---------- */
+.free-frame {
+  position: relative;
+  isolation: isolate; /* "behind the content" layers stay above the section's background */
+  /* Things sticking out past the left/right edge are cut off, so phones never scroll sideways.
+     Up and down they may still hang over the next section. */
+  overflow-x: clip;
+}
+/* Free things are positioned from the content column (same width and centering as the
+   normal blocks), starting at the section's top edge. */
+.free-column {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+}
+/* The scene's readability panel styles every section column; the free column keeps only its
+   width (so it matches the content column) and none of its padding or background. */
+[data-scene-veil] main section > .free-column {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+}
+.free-origin {
+  position: relative;
+  height: 0;
+}
+/* The free layer is a zero-height layer at the column's top-left; items are positioned from it. */
+.free-layer,
+.free-layer[data-puck-dropzone] {
+  position: absolute !important;
+  inset: 0 0 auto 0;
+  height: 0 !important;
+  min-height: 0 !important;
+  outline: none !important;
+  background: none !important;
+  overflow: visible;
+}
+/* The editor marks draggable blocks "position: relative"; free items must stay absolute. */
+.free-item {
+  position: absolute !important;
+}
+.free-box {
+  width: 100%;
+}
+.free-item[data-free-dragging] {
+  cursor: grabbing;
+  user-select: none;
+  opacity: 0.85;
+}
+[data-puck-component].free-item {
+  cursor: move;
+}
+.free-handle {
+  position: absolute;
+  z-index: 5;
+  width: calc(12px / var(--k, 1));
+  height: calc(12px / var(--k, 1));
+  border: calc(2px / var(--k, 1)) solid #2563eb;
+  background: white;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: auto !important;
+  transition: opacity 0.15s;
+}
+.free-item:hover > .free-handle,
+.free-item[data-free-dragging] > .free-handle {
+  opacity: 1;
+}
+.free-handle-e {
+  right: calc(-6px / var(--k, 1));
+  top: calc(50% - 6px / var(--k, 1));
+  cursor: ew-resize;
+}
+.free-handle-s {
+  bottom: calc(-6px / var(--k, 1));
+  left: calc(50% - 6px / var(--k, 1));
+  cursor: ns-resize;
+}
+.free-handle-se {
+  right: calc(-6px / var(--k, 1));
+  bottom: calc(-6px / var(--k, 1));
+  cursor: nwse-resize;
+}
+.free-handle-rot {
+  top: calc(-30px / var(--k, 1));
+  left: calc(50% - 6px / var(--k, 1));
+  border-radius: 999px;
+  cursor: grab;
+}
+
+/* Dropping a picture onto the page in the editor. */
+body[data-file-drag]::after {
+  content: "Drop to place the picture here  ·  hold Shift to add it as a block instead";
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  translate: -50% 0;
+  z-index: 9999;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: white;
+  font:
+    600 14px/1.2 system-ui,
+    sans-serif;
+  pointer-events: none;
+}
+[data-drop-target] {
+  outline: 3px dashed #2563eb !important;
+  outline-offset: 4px;
+}
+
+/* ---------- Block text settings (see src/builder/style/text-style.js) ---------- */
+/* The block's own text pieces follow her settings instead of their built-in sizes. */
+.ts-size * {
+  font-size: inherit;
+}
+.ts-weight * {
+  font-weight: inherit;
+}
+.ts-ls * {
+  letter-spacing: inherit;
+}
+.ts-lh * {
+  line-height: inherit;
+}
+.ts-ff * {
+  font-family: inherit;
+}
+.ts-align * {
+  text-align: inherit;
+}
+/* Picture or gradient inside the letters. */
+.ts-fill {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.ts-fill * {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  background: none !important;
+}
+
+/* ---------- Block animations ---------- */
+.ta {
+  animation-duration: var(--ta-time, 1s);
+  animation-delay: var(--ta-delay, 0s);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+/* When it scrolls into view: hidden until it's on screen, then plays once. */
+.ta-on-view:not(.ta-in):is(
+    .ta-fade-up,
+    .ta-slide-left,
+    .ta-pop,
+    .ta-bounce,
+    .ta-typewriter,
+    .ta-blur-in
+  ) {
+  opacity: 0;
+}
+.ta-on-view:not(.ta-in) {
+  animation-name: none !important;
+}
+.ta-on-hover:not(:hover) {
+  animation-name: none !important;
+}
+.ta-on-loop {
+  animation-iteration-count: infinite;
+}
+.ta-fade-up {
+  animation-name: ta-fade-up;
+}
+.ta-slide-left {
+  animation-name: ta-slide-left;
+}
+.ta-pop {
+  animation-name: ta-pop;
+}
+.ta-bounce {
+  animation-name: ta-bounce;
+}
+.ta-typewriter {
+  animation-name: ta-typewriter;
+  animation-timing-function: steps(24, end);
+}
+.ta-blur-in {
+  animation-name: ta-blur-in;
+}
+.ta-float {
+  animation-name: ta-float;
+  animation-timing-function: ease-in-out;
+}
+.ta-wiggle {
+  animation-name: ta-wiggle;
+  animation-timing-function: ease-in-out;
+}
+.ta-pulse {
+  animation-name: ta-pulse;
+  animation-timing-function: ease-in-out;
+}
+.ta-glow {
+  animation-name: ta-glow;
+  animation-timing-function: ease-in-out;
+}
+.ta-rainbow {
+  animation-name: ta-rainbow;
+  animation-timing-function: linear;
+}
+.ta-shake {
+  animation-name: ta-shake;
+  animation-timing-function: linear;
+}
+.ta-flicker {
+  animation-name: ta-flicker;
+  animation-timing-function: steps(1, end);
+}
+/* Gradient text slides its colors along when animated. */
+.ts-fill.ta-rainbow {
+  animation-name: ta-fill-shift;
+}
+
+@keyframes ta-fade-up {
+  from {
+    opacity: 0;
+    translate: 0 1.2em;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes ta-slide-left {
+  from {
+    opacity: 0;
+    translate: -2em 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes ta-pop {
+  0% {
+    opacity: 0;
+    scale: 0.6;
+  }
+  70% {
+    opacity: 1;
+    scale: 1.08;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes ta-bounce {
+  0% {
+    opacity: 0;
+    translate: 0 -1.5em;
+  }
+  50% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  70% {
+    translate: 0 -0.4em;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+@keyframes ta-typewriter {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes ta-blur-in {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes ta-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -0.35em;
+  }
+}
+@keyframes ta-wiggle {
+  0%,
+  100% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -4deg;
+  }
+  75% {
+    rotate: 4deg;
+  }
+}
+@keyframes ta-pulse {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.07;
+  }
+}
+@keyframes ta-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px var(--color-primary));
+  }
+}
+@keyframes ta-rainbow {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes ta-fill-shift {
+  to {
+    background-position: 200% 50%;
+  }
+}
+@keyframes ta-shake {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  20% {
+    translate: -3px 1px;
+  }
+  40% {
+    translate: 3px -1px;
+  }
+  60% {
+    translate: -2px -1px;
+  }
+  80% {
+    translate: 2px 1px;
+  }
+}
+@keyframes ta-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.35;
+  }
+  46% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ta {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

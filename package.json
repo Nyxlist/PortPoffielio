@@ -1,0 +1,36 @@
+{
+  "name": "vtuber-website",
+  "version": "1.0.0",
+  "description": "Public get-to-know-me website for a VTuber, with a private admin dashboard",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-react": "^6.3.0",
+    "daisyui": "^5.8.2",
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@fontsource-variable/fredoka": "^5.3.0",
+    "@fontsource-variable/nunito": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@fontsource-variable/quicksand": "^5.3.0",
+    "@fontsource/caprasimo": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "@puckeditor/core": "^0.24.2",
+    "@supabase/supabase-js": "^2.119.2",
+    "idb-keyval": "^6.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "private": true,
+  "type": "module"
+}

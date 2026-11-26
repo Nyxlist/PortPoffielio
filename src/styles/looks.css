@@ -1,0 +1,55 @@
+/* ---------- Theme looks (Theme maker): card panels, pill header, glints ---------- */
+
+/* "White card" readability panel: like the card on her Carrd page. */
+[data-scene-veil="card"] main section > div {
+  background: var(--color-base-100);
+  border: 2px dashed color-mix(in srgb, var(--color-primary) 35%, transparent);
+  border-radius: var(--radius-box);
+  box-shadow: 0 12px 32px
+    color-mix(in srgb, var(--color-primary) 12%, transparent);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: calc(100% - 2rem);
+}
+[data-scene-veil="card"] main section > .free-column {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Pill buttons in the centered header. */
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    279deg,
+    var(--color-primary) 40%,
+    var(--color-secondary)
+  );
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px color-mix(in srgb, var(--color-primary) 60%, #000 10%);
+  box-shadow: 0 4px 12px
+    color-mix(in srgb, var(--color-primary) 25%, transparent);
+  transition:
+    translate 0.15s,
+    filter 0.15s;
+}
+.nav-pill:hover {
+  translate: 0 -2px;
+  filter: brightness(1.05);
+}
+.nav-pill[aria-current="page"] {
+  filter: saturate(1.3) brightness(0.97);
+}
+
+.scene-glint {
+  filter: drop-shadow(0 0 6px rgb(255 255 255 / 0.9));
+}
