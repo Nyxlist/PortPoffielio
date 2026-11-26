@@ -1,7 +1,7 @@
 {
   "version": 5,
   "name": "Poffie",
-  "footerNote": "Business inquiries: see the Contact page",
+  "footerNote": "Business: poffiehunni@gmail.com · Manager: @ianamuffin",
   "theme": {
     "colors": {
       "primary": "#ff8fb1",
@@ -402,12 +402,12 @@
     "socials": [
       {
         "name": "YouTube",
-        "url": "#",
+        "url": "https://www.youtube.com/@poffiehunni",
         "style": "primary",
         "featured": true
       },
       {
-        "name": "Twitch",
+        "name": "TikTok",
         "url": "#",
         "style": "secondary",
         "featured": true
@@ -425,8 +425,20 @@
         "featured": true
       },
       {
-        "name": "TikTok",
-        "url": "#",
+        "name": "Trakteer",
+        "url": "https://trakteer.id/poffiehunni/",
+        "style": "outline",
+        "featured": false
+      },
+      {
+        "name": "Tako",
+        "url": "https://tako.id/PoffieHunni",
+        "style": "outline",
+        "featured": false
+      },
+      {
+        "name": "VGen",
+        "url": "https://vgen.co/poffiehunni",
         "style": "outline",
         "featured": false
       }
@@ -1775,7 +1787,7 @@
                 {
                   "type": "Text",
                   "props": {
-                    "text": "These are my only official accounts. For business inquiries, see the Contact page.",
+                    "text": "These are my only official accounts.\nBusiness email: poffiehunni@gmail.com\nManager: @ianamuffin",
                     "size": "sm",
                     "color": "muted",
                     "bold": false,
@@ -1894,7 +1906,7 @@
                               "type": "Button",
                               "props": {
                                 "label": "Email me",
-                                "link": "mailto:business@example.com",
+                                "link": "mailto:poffiehunni@gmail.com",
                                 "style": "primary",
                                 "size": "md",
                                 "id": "Button-fdd326d5-8087-4422-833f-334290f51648"
@@ -1903,7 +1915,7 @@
                             {
                               "type": "Text",
                               "props": {
-                                "text": "business@example.com",
+                                "text": "poffiehunni@gmail.com",
                                 "size": "sm",
                                 "color": "muted",
                                 "bold": false,
@@ -1911,6 +1923,19 @@
                                 "align": "auto",
                                 "style": {},
                                 "id": "Text-46f5605d-424f-42e7-a0ad-7f474a925b63"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "props": {
+                                "id": "Text-6e210698-304c-4c76-b873-88a287e2e7c0",
+                                "text": "Manager: @ianamuffin",
+                                "size": "sm",
+                                "color": "muted",
+                                "bold": false,
+                                "narrow": false,
+                                "align": "auto",
+                                "style": {}
                               }
                             }
                           ],

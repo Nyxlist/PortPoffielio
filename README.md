@@ -2,6 +2,8 @@
 
 A public "get to know me" website for a VTuber, with a drag-and-drop editor at `/admin` so she can design every page herself: blocks, layout, theme, pages, and menu.
 
+**Live:** https://nyxlist.github.io/PortPoffielio/ · **Editor:** https://nyxlist.github.io/PortPoffielio/admin
+
 ## Stack
 
 - **React + Vite**: one app; the public site at every address and the editor at `/admin`
