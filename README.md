@@ -75,25 +75,10 @@ src/styles/free-and-text.css  Free placement, block text settings, block animati
 2. Register it in `src/builder/config.jsx` (`components` and a category).
 3. Only use the choices in `options.js` for colors and spacing, so pages stay on-theme and readable.
 
-## Publishing on GitHub Pages
-
-The repo is set up for https://github.com/Nyxlist/PortPoffielio (site at `https://nyxlist.github.io/PortPoffielio/`, editor at `…/admin`).
-
-1. Push to `main` or `master`.
-2. One time: GitHub → repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. `.github/workflows/deploy-pages.yml` builds with `BASE_PATH=/<repo name>/` and publishes. It copies `index.html` to `404.html` so direct links like `/queue` and `/admin` open the right page.
-
-All in-site addresses go through `src/lib/base-path.js` (`withBase`, `stripBase`), and `safeUrl` / `safeImageUrl` add the base for links like `/queue` and pictures like `/starter/…`. Saved pages keep plain addresses, so they work on any host. Edits made in `/admin` are saved only in that browser until Supabase is added.
 
 ## Hosting note
 
 The site is a single-page app: the host must serve `index.html` for every path (e.g. `/about`). Most static hosts have a "single-page app" / rewrite setting for this.
-
-## Design tokens and Figma
-
-Figma file: https://www.figma.com/design/Oj10QsbJPt6eYUMc3tBkhu (pages: **Design system** for variables, text styles, and components; **Pages** with one section per site page, each holding a 1440px desktop and a 390px mobile frame). The free Starter plan allows only 3 Figma pages, so site pages are sections rather than separate Figma pages.
-
-The fallback theme in `src/styles/main.css` and the editor's default theme (`src/data/default-site.js`) match the Figma `Theme` variables (`color/primary` ↔ `--color-primary`, `radius/box` ↔ `--radius-box`). The Figma page frames show the **starting** pages; once she edits in the editor, the live site is the source of truth.
 
 ## Security
 
